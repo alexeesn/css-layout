@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout 3</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: Arial, sans-serif; 
+      height: 100vh; 
+      display: flex; 
+      flex-direction: column; 
+      background: #f3f4f6; 
+      padding: 15px; 
+      gap: 15px; 
+    }
+
+    /* Circles are standalone */
+    .avatar, .footer-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid #667eea;
+      flex-shrink: 0;
+    }
+
+    header, nav, footer {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      padding: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 50px;
+    }
+    
+    .header-row, .footer-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    nav {
+      font-weight: bold;
+      text-align: center;
+    }
+
+    main { 
+      flex: 1; 
+      display: flex; 
+      gap: 15px; 
+    }
+
+    .left {
+      width: 550px;
+      flex: 0 0 550px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex; 
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    } 
+
+    .right {
+      flex: 1; 
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex; 
+      flex-direction: column;
+      align-items: center; 
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="header-row">
+    <div class="avatar"></div>
+    <header>Layout3</header>
+  </div>
+
+  <nav></nav>
+
+  <main>
+    <div class="left">
+      <h2></h2>
+      <a href="layout1.html" class="button">Go to Layout 1</a>
+    </div>
+    <div class="right">
+      <h2></h2>
+      <a href="layout2.html" class="button">Go to Layout 2</a>
+    </div>
+  </main>
+
+  <div class="footer-row">
+    <footer></footer>
+    <div class="footer-avatar"></div>
+  </div>
+</body>
+</html>
